@@ -35,3 +35,9 @@ botton{
   --black: black;
 }
 
+p,span{
+  color: var(--gray-1) !important;
+  
+}
+
+

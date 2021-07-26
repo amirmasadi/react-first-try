@@ -9,6 +9,9 @@ function Navbar() {
   return (
     <Navstyle className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container-fluid align-items-center">
+       <NavLink className="navbar-brand text-white-50" to="/">
+          amirasadi
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,11 +23,12 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+        
         <div
-          className="collapse navbar-collapse justify-content-center ms-lg-5"
+          className="collapse navbar-collapse justify-content-center me-lg-5"
           id="navbarNavAltMarkup"
         >
-          <div className="navbar-nav ms-lg-5">
+          <div className="navbar-nav me-lg-5">
             <NavLink className="nav-link px-lg-5 lead" exact to="/">
               خانه
             </NavLink>
@@ -39,9 +43,7 @@ function Navbar() {
             </NavLink>
           </div>
         </div>
-        <NavLink className="navbar-brand text-white-50" to="/">
-          amirasadi
-        </NavLink>
+
       </div>
     </Navstyle>
   );
