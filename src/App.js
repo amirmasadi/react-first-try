@@ -1,11 +1,34 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.rtl.min.css'
 import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Projects from './pages/Projects'
 
 function App() {
   return (
-    <Navbar />
+    <Router>
+      <Navbar />
+      <div className="">
+        <Switch >
+          <Route path="/About">
+            <About />
+          </Route>
+          <Route path="/Projects">
+            <Projects />
+          </Route>
+          <Route path="/Contact">
+            <Contact />
+          </Route>
+          <Route path="/" >
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
