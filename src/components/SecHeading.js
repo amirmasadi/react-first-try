@@ -19,7 +19,7 @@ export default function SecHeading({
 }) {
   return (
     <SecHeadingStyle className={headingPos}>
-      <p className=" ">{subText}</p>
+      <p className="mb-0">{subText}</p>
       <h3 className="text-white fw-bold mb-4">{h3Text}</h3>
     </SecHeadingStyle>
   );
