@@ -76,13 +76,13 @@ export default function Showcase() {
           <h2>امیر اسدی</h2>
         </div>
         <img
-          className="img-fluid border border-3 border-muted"
+          className="img-fluid border border-3 border-muted border rounded-1"
           src={showcaseImg}
           alt="showcase_image"
         />
 
         <div className="d-flex flex-column align-items-center show-case-text">
-          <PText>
+          <PText textPos="text-center">
             من به مدت 4 سال به عنوان یک طراح و توسعه دهنده وب مستقل کار می کنم.
             من عاشق طراحی و ایجاد تجارب وب جدید برای مردم هستم من به مدت 4 سال
             به عنوان یک طراح و توسعه دهنده وب مستقل کار می کنم.
@@ -103,7 +103,7 @@ export default function Showcase() {
       </div>
 
       <div className="scroll-part d-flex align-items-center">
-        <a href="/" className="me-5 ">اسکرول</a>
+        <a href="#home-about" className="me-5 ">اسکرول</a>
         <img src={ScrollArrow} alt="" />
       </div>
     </ShowcaseStyle>
