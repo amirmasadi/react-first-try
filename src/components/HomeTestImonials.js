@@ -4,16 +4,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/effect-fade/effect-fade.min.css"
+
+
 
 // import Swiper core and required modules
-import SwiperCore, { Autoplay, Navigation } from "swiper/core";
+import SwiperCore, {EffectFade, Autoplay, Navigation } from "swiper/core";
 import styled from "styled-components";
 import SecHeading from "./SecHeading";
 import TestimonialsItems from "./TestimonialsItems";
 import Testimonials from "../assets/data/testimonials";
 
 // install Swiper modules
-SwiperCore.use([Autoplay, Navigation]);
+SwiperCore.use([EffectFade,Autoplay, Navigation]);
 
 const HomeTesStyle = styled.div`
 width: 100%;
@@ -76,6 +79,7 @@ export default function App() {
       <HomeTesStyle>
         <Swiper
           spaceBetween={30}
+          effect={'fade'}
           centeredSlides={true}
           autoplay={{
             delay: 2500,
