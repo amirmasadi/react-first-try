@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import projects from "../assets/data/projects";
 import ProjectItems from "./ProjectItems";
+import SecHeading from "./SecHeading";
+
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
@@ -14,58 +16,97 @@ import SwiperCore, { Navigation } from "swiper/core";
 
 SwiperCore.use([Navigation]);
 
-const ProjectSwiperStyle = styled.section`
-  height: 600px;
-  margin-bottom: 200px;
+const ProjectSwiperStyle = styled.div`
+  height: 956px;
+  margin-top: 100px;
+  position: relative;
 
   .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 696px;
   }
 
   .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
+      width: 400px;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    -ms-flex-pack: center;top
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    -webkit-align-items: top;
+    align-items: top;
   }
 
   .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 450px;
     object-fit: cover;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next{
+    right: 10px;
+    top: auto;
+    bottom: 0px;
+    color: var(--gray-1);
+    background-color: var(--deep-dark);
+    padding: 28px;
+    border-radius: 8px;
+  }
+  .swiper-button-next{
+    right: 80px;
   }
 `;
 
 export default function ProjectSwiper() {
   return (
-    <ProjectSwiperStyle className="container-lg">
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        navigation={true}
-        className="mySwiper"
-      >
-        {projects.map((item, index) => {
-          <SwiperSlide>
-            <ProjectItems />
-          </SwiperSlide>;
-        })}
-      </Swiper>
-    </ProjectSwiperStyle>
+    <section >
+      <SecHeading
+        h3Text="پروژه ها"
+        subText="برخی از نمونه کار ها"
+        headingPos="text-center"
+      />
+      <ProjectSwiperStyle className="container-lg">
+        <Swiper
+          spaceBetween={30}
+          navigation={true}
+          slidesPerView={1}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 1200px
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
+          className="mySwiper"
+        >
+          {projects.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <ProjectItems
+                  ptoImg={item.img}
+                  proTitle={item.name}
+                  proText={item.desc}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </ProjectSwiperStyle>
+    </section>
   );
 }

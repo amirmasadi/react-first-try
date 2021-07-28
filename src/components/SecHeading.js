@@ -13,8 +13,8 @@ const SecHeadingStyle = styled.div`
 `;
 
 export default function SecHeading({
-  h3Text,
-  subText,
+  h3Text= "تست",
+  subText="تست",
   headingPos = "text-center text-md-start",
 }) {
   return (

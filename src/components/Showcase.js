@@ -76,7 +76,7 @@ export default function Showcase() {
           <h2>امیر اسدی</h2>
         </div>
         <img
-          className="img-fluid border border-3 border-muted border rounded-1"
+          className="img-fluid border border-3 border-muted rounded-1"
           src={showcaseImg}
           alt="showcase_image"
         />
