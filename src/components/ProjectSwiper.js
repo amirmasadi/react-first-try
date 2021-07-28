@@ -45,8 +45,8 @@ const ProjectSwiperStyle = styled.div`
 
   .swiper-slide img {
     display: block;
-    width: 400px;
-    height: 450px;
+    width: 380px;
+    height: 400px;
     object-fit: cover;
   }
 
