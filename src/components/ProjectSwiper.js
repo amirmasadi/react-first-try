@@ -17,7 +17,7 @@ import SwiperCore, { Navigation } from "swiper/core";
 SwiperCore.use([Navigation]);
 
 const ProjectSwiperStyle = styled.div`
-  height: 956px;
+  height: 708px;
   margin-top: 100px;
   position: relative;
 
@@ -94,7 +94,7 @@ export default function ProjectSwiper() {
           }}
           className="mySwiper"
         >
-          {projects.map((item) => {
+          {projects.map(item => {
             return (
               <SwiperSlide key={item.id}>
                 <ProjectItems

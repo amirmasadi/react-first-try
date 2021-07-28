@@ -41,7 +41,8 @@ botton {
 
 p,
 span,
-h3 {
+h3,
+h4 {
   color: var(--gray-1) !important;
 }
 
