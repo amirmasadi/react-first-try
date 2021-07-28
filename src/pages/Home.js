@@ -4,6 +4,7 @@ import HomeServices from '../components/HomeServices'
 import ProjectSwiper from '../components/ProjectSwiper'
 import Showcase from '../components/Showcase'
 import HomeTestImonials from '../components/HomeTestImonials'
+import DownloadCv from '../components/DownloadCv'
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HomeServices />
         <ProjectSwiper />
         <HomeTestImonials />
+        <DownloadCv />
         </>
     )
 }

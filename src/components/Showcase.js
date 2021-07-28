@@ -98,8 +98,9 @@ export default function Showcase() {
       <div className="social-part d-flex align-items-center">
         <span className="me-4 ">تماس</span>
         <img src={SocialArrow} alt="" />
-        <a href="/" targrt="_blank" className="ms-5 ">لینکدین</a>
-        <a href="https://jobinja.ir/user/Amirasadi" target="_blank" className="ms-3 " rel="noreferrer">رزومه</a>
+        <a href="/" targrt="_blank" className="ms-5 ">LI</a>
+        <a href="https://jobinja.ir/user/Amirasadi" target="_blank" className="ms-3 " rel="noreferrer">CV</a>
+        <a href="https://pin.it/6Zikgxd" target="_blank" className="ms-3 " rel="noreferrer">PIN</a>
       </div>
 
       <div className="scroll-part d-flex align-items-center">

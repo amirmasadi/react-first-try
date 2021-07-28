@@ -65,7 +65,7 @@ width: 100%;
 `;
 const HomeTesStyleSec = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 86vh;
 `;
 
 export default function App() {

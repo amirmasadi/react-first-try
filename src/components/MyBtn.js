@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ButtonStyle = styled.div`
-  .button {
+  .button,
+  a {
     font-size: 1.3rem;
     background-color: ${(props) =>
       props.outline ? "transperant" : "var(--gray-1)"};
@@ -14,18 +15,25 @@ const ButtonStyle = styled.div`
     color: ${(props) => (props.outline ? "var(--gray-1)" : "var(--deep-dark)")};
   }
   @media only screen and (max-width: 768px) {
-    .button {
+    .button,
+    a {
       font-size: 1rem;
     }
   }
 `;
 
-export default function MyBtn({ outline, btnLink, btnText = "دکمه تست" }) {
+export default function MyBtn({
+  outline,
+  btnLink,
+  btnText = "دکمه تست",
+}) {
   return (
-    <ButtonStyle outline={outline} className="button-wrapper " >
-      <Link className="button w-100 text-center" to={btnLink}>
-        {btnText}
-      </Link>
+    <ButtonStyle outline={outline} className="button-wrapper ">
+ 
+        <Link className="button w-100 text-center" to={btnLink}>
+          {btnText}
+        </Link>
+
     </ButtonStyle>
   );
 }
