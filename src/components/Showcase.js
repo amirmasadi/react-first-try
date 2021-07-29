@@ -3,6 +3,7 @@ import styled from "styled-components";
 import showcaseImg from "../assets/images/hero.png";
 import MyBtn from "./MyBtn";
 import PText from "./PText";
+import MyH2 from "./MyH2";
 import SocialArrow from "../assets/images/social-media-arrow.svg";
 import ScrollArrow from "../assets/images/scroll-down-arrow.svg";
 
@@ -46,7 +47,7 @@ const ShowcaseStyle = styled.section`
       margin-bottom: -50px;
       z-index: 1;
 
-      h2 {
+      .showcase-title {
         font-size: 4.5rem;
         text-shadow: 0px 0px 20px black;
       }
@@ -72,8 +73,8 @@ export default function Showcase() {
     <ShowcaseStyle className="w-100  mt-5 text-white">
       <div className="show-case-content container h-100 d-flex justify-content-md-center align-items-center flex-column mt-sm-5">
         <div className="d-flex flex-column align-items-center show-case-title">
-          <span className="fs-2">خوش اومدی</span>
-          <h2>امیر اسدی</h2>
+          <MyH2 className="">خوش اومدی</MyH2>
+          <h2 className="showcase-title">امیر اسدی</h2>
         </div>
         <img
           className="img-fluid border border-3 border-muted rounded-1"
