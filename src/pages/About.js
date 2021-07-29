@@ -1,9 +1,19 @@
 import React from 'react'
+import AboutShowcase from '../components/AboutShowcase'
+import AboutSkills from '../components/AboutSkills'
+import DownloadCv from '../components/DownloadCv'
 
 export default function Home() {
     return (
-        <div>
-            <h2 className="d-flex justify-content-center align-items-center text-light mt-5">درباره</h2>
-        </div>
+        <section>
+            <AboutShowcase />
+            <AboutSkills />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />git 
+            <DownloadCv />
+        </section>
     )
 }
