@@ -13,7 +13,7 @@ export default function SkillItems({ title, items }) {
           return (
             <div
               key={index}
-              className="ms-3 p-2 rounded-3 mb-3 mb-md-0"
+              className="me-2 me-md-3 p-2 rounded-3 mb-3 mb-md-0"
               style={{ backgroundColor: "var(--deep-dark)" }}
             >
               <PText>{itm}</PText>

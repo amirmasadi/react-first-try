@@ -12,7 +12,7 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <br />git 
+            <br /> 
             <DownloadCv />
         </section>
     )
