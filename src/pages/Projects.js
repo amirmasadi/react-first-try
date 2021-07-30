@@ -1,9 +1,12 @@
 import React from 'react'
+import SecHeading from '../components/SecHeading'
+import ProjectPageSec from '../components/ProjectPageSec'
 
 export default function Home() {
     return (
-        <div>
-            <h2 className="d-flex justify-content-center align-items-center text-light mt-5">پروژه ها</h2>
-        </div>
+        <section className="container">
+            <SecHeading h3Text="پروژه ها" subText="برخی از نمونه کار ها" headingPos="text-center" />
+            <ProjectPageSec />
+        </section>
     )
 }

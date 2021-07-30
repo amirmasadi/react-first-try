@@ -16,7 +16,7 @@ const FooterStyle = styled.section`
 export default function Footer() {
   return (
     <FooterStyle className="container-fluid w-100 position-relative">
-      <div className="w-75 d-flex flex-column flex-md-row justify-content-around align-items-baseline m-auto gap-5 gap-md-0">
+      <div className="w-75 d-flex flex-column flex-lg-row justify-content-around align-items-baseline m-auto gap-5 gap-lg-0">
         <div>
           <MyH2 className="mb-4 flex-grow-2 ">امیراسدی</MyH2>
           <PText textPos="text-right">
@@ -77,7 +77,7 @@ export default function Footer() {
           </FooterList>
         </div>
 
-        <div className="position-absolute bottom-0 p-2 w-100" style={{backgroundColor:"var(--dark-bg)"}}>
+        <div className="position-absolute bottom-0 py-2 px-0 px-md-5 w-100" style={{backgroundColor:"var(--dark-bg)"}}>
           <PText>&copy; 2021 امیراسدی </PText>
         </div>
     </FooterStyle>
