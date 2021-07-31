@@ -4,9 +4,10 @@ import FooterList from "./FooterList";
 import MyH2 from "./MyH2";
 import PText from "./PText";
 
-const FooterStyle = styled.section`
+const FooterStyle = styled.div`
   background-color: var(--deep-dark);
   padding: 130px 0px 100px 0px;
+  margin-top: 60px;
 
   p{
     text-align: justify;
