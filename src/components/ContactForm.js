@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useForm } from "@formspree/react";
+import { motion } from "framer-motion";
 
 const ContactFormStyle = styled.form`
   label {
@@ -44,10 +45,6 @@ const ContactFormStyle = styled.form`
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xdoywgpa");
-  console.log(state.succeeded)
-  if (state.succeeded) {
-    return <p className="fs-5 bg-success p-3 rounded">تشکر... سعی میکنم در کمترین زمان ممکن جواب بدم. :)</p>;
-  }
   return (
     <ContactFormStyle
       className="d-flex flex-column"
@@ -71,6 +68,13 @@ export default function ContactForm() {
       <button type="submit" disabled={state.submitting}>
         ارسال
       </button>
+      {(state.succeeded && <motion.p className="fs-5 bg-success p-3 my-4 rounded"
+        animate={{opacity:0,
+          transition:{
+            delay: 9,
+          }
+        }}
+      >تشکر... سعی میکنم در کمترین زمان ممکن جواب بدم. :)</motion.p>)}
     </ContactFormStyle>
   );
 }

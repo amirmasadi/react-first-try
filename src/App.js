@@ -6,10 +6,12 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <div className="">
         <Switch >

@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--dark-bg) !important;
+  overflow-x: hidden;
 }
 
 a {
@@ -37,6 +38,11 @@ botton {
   --gray-2: #363636;
   --white: white;
   --black: black;
+}
+
+::selection{
+  color: var(--deep-dark);
+  background-color: var(--gray-1);
 }
 
 p,

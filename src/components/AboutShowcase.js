@@ -4,6 +4,7 @@ import MyH2 from "./MyH2";
 import MyBtn from "./MyBtn";
 import AboutPic from "../assets/images/about-page-img.png";
 
+
 export default function AboutShowcase() {
   return (
     <section className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-5 gap-md-0">
