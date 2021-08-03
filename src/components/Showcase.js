@@ -124,27 +124,50 @@ export default function Showcase() {
             امیر اسدی
           </motion.h2>
         </div>
-        <div style={{width: "	485", height: "304"}} className="position-relative showcaseImg">
+        <div
+          style={{ width: "	485", height: "304" }}
+          className="position-relative showcaseImg"
+        >
           <img
             className="img-fluid border border-3 border-muted rounded-1"
             src={showcaseImg}
             alt="showcase_image"
           />
-          <motion.div className="position-absolute bg-secondary top-0 w-0 h-100"
-            initial={{width: "100%",left:"0%"}}
-            animate={{width: "0%", left: "100%",transition:{
-              duration: 0.2,
-              delay: 0.5,
+          <motion.div
+            className="position-absolute bg-dark top-0 w-0 h-100"
+            initial={{ width: "100%", left: "0%" }}
+            animate={{
+              width: "0%",
+              left: "100%",
+              transition: {
+                duration: 0.2,
+                delay: 0.5,
+              },
             }}
-}
           ></motion.div>
-          <motion.div className="position-absolute bg-dark top-0 w-0 h-100"
-            initial={{width: "100%",left:"0%"}}
-            animate={{width: "0%", left: "100%",transition:{
-              duration: 0.3,
-              delay: 0.2,
+          <motion.div
+            className="position-absolute bg-secondary top-0 w-0 h-100"
+            initial={{ width: "100%", left: "0%" }}
+            animate={{
+              width: "0%",
+              left: "100%",
+              transition: {
+                duration: 0.3,
+                delay: 0.2,
+              },
             }}
-}
+          ></motion.div>
+          <motion.div
+            className="position-absolute bg-light top-0 w-0 h-100"
+            initial={{ width: "100%", left: "0%" }}
+            animate={{
+              width: "0%",
+              left: "100%",
+              transition: {
+                duration: 0.3,
+                delay: 0.1,
+              },
+            }}
           ></motion.div>
         </div>
 
