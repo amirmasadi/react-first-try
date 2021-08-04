@@ -11,7 +11,7 @@ export default function AboutShowcase() {
       <div className="d-flex flex-column align-items-start">
         <PText>امیر اسدی هستم</PText>
         <MyH2 className="mb-5">فریلنسر حوضه وب</MyH2>
-        <PText textPos="text-right">
+        <PText textPos="text-right" maxwidth="700px">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
           از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
           متنوع با هدت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان

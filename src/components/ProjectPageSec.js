@@ -74,6 +74,7 @@ export default function ProjectPageSec() {
               proTitle={item.name}
               proText={item.desc}
               key={item.id}
+              id={item.id}
             />
           );
         })}

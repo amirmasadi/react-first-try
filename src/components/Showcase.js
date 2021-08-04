@@ -85,7 +85,7 @@ const parentMotion: Variants = {
 const childMotion: Variants = {
   initial: {
     opacity: 0,
-    y: 0,
+    y: 10,
   },
   animate: {
     opacity: 1,
