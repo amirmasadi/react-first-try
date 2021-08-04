@@ -70,7 +70,7 @@ const HomeTesStyleSec = styled.section`
 
 export default function App() {
   return (
-    <HomeTesStyleSec className="container-sm">
+    <HomeTesStyleSec style={{marginTop:"150px"}} className="container-sm">
       <SecHeading
         h3Text="نظرات"
         subText="مشتریان در مورد من چی میگن"

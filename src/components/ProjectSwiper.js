@@ -64,7 +64,7 @@ const ProjectSwiperStyle = styled.div`
 
 export default function ProjectSwiper() {
   return (
-    <section >
+    <section style={{marginTop:"200px"}}>
       <SecHeading
         h3Text="پروژه ها"
         subText="برخی از نمونه کار ها"

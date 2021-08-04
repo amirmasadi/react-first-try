@@ -134,14 +134,14 @@ export default function Showcase() {
             alt="showcase_image"
           />
           <motion.div
-            className="position-absolute bg-dark top-0 w-0 h-100"
+            className="position-absolute bg-light top-0 w-0 h-100"
             initial={{ width: "100%", left: "0%" }}
             animate={{
               width: "0%",
               left: "100%",
               transition: {
                 duration: 0.2,
-                delay: 0.5,
+                delay: 1.3,
               },
             }}
           ></motion.div>
@@ -153,19 +153,19 @@ export default function Showcase() {
               left: "100%",
               transition: {
                 duration: 0.3,
-                delay: 0.2,
+                delay: 1.2,
               },
             }}
           ></motion.div>
           <motion.div
-            className="position-absolute bg-light top-0 w-0 h-100"
+            className="position-absolute bg-dark top-0 w-0 h-100"
             initial={{ width: "100%", left: "0%" }}
             animate={{
               width: "0%",
               left: "100%",
               transition: {
                 duration: 0.3,
-                delay: 0.1,
+                delay: 1.1,
               },
             }}
           ></motion.div>

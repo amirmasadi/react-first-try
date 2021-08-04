@@ -6,7 +6,7 @@ import HAboutImg from "../assets/images/about-sec-img.png";
 
 export default function HomeAbout() {
   return (
-    <section id="home-about" className="container-md d-flex flex-column flex-md-row align-items-center justify-content-around">
+    <section style={{marginTop:"200px"}} id="home-about" className="container-md d-flex flex-column flex-md-row align-items-center justify-content-around">
       <div>
         <SecHeading
           h3Text="درباره من"

@@ -4,7 +4,7 @@ import ServicesItems from "./ServicesItems";
 
 export default function HomeServices() {
   return (
-    <section className="container-lg">
+    <section className="container-lg" style={{marginTop:"200px"}}>
       <SecHeading
         h3Text="خدمات"
         subText="توانایی های قابل ارائه"
