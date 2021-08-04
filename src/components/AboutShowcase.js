@@ -2,7 +2,7 @@ import React from "react";
 import PText from "./PText";
 import MyH2 from "./MyH2";
 import MyBtn from "./MyBtn";
-import AboutPic from "../assets/images/about-page-img.png";
+import AboutPic from "../assets/images/about-page-img.jpg";
 
 
 export default function AboutShowcase() {
