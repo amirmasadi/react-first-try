@@ -1,36 +1,50 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PText from "./PText";
 import projects from "../assets/data/projects";
 import MyH2 from "./MyH2";
 import { motion } from "framer-motion";
+
+const parentMotion = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+const childMotion = {
+  initial: { y: 200, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 export default function ProjectDetails() {
   const { projId } = useParams();
   let projDetails = projects.find((i) => i.id === parseInt(projId, 10));
 
   return (
-    <div className="container" style={{ paddingTop: "150px" }}>
+    <motion.div
+      className="container"
+      style={{ paddingTop: "150px" }}
+      initial={{ opacity: 0, scale: 0.1 }}
+      animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
+    >
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-top">
-        <div className="p-1 p-md-5">
-          <motion.div
-            className="mb-3"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-          >
+        <Link to="/projects" className="text-white" style={{fontSize: "4rem"}}>&#215;</Link>
+        <motion.div className="p-1 p-md-5" variants={parentMotion} initial={"initial"} animate={"animate"}>
+          <motion.div className="mb-3" variants={childMotion}>
             <MyH2>{projDetails.name}</MyH2>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
-          >
+          <motion.div variants={childMotion}>
             <PText>{projDetails.desc}</PText>
           </motion.div>
-          <motion.p
-            className="text-muted mt-5 fs-5"
-            initial={{ opacity: 0, y: 150 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-          >
+          <motion.p className="text-muted mt-5 fs-5" variants={childMotion}>
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
@@ -49,17 +63,16 @@ export default function ProjectDetails() {
             گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
             که لازم است.
           </motion.p>
-        </div>
+        </motion.div>
         <motion.img
           className="image-fluid rounded border border-2 border-secondary"
           style={{ maxWidth: "400px", objectFit: "cover" }}
           src={projDetails.img}
           alt=""
-          initial={{ scale: 0.8, y: "100%", opacity: 0 }}
+          initial={{ scale: 1.5, x: "40vw" }}
           animate={{
+            x: 0,
             scale: 1,
-            y: 0,
-            opacity: 1,
             transition: {
               type: "tween",
               duration: 0.8,
@@ -67,6 +80,6 @@ export default function ProjectDetails() {
           }}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,21 +1,22 @@
 import styled from "styled-components";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
+import { useState } from "react";
 
 const Navstyle = styled.nav`
   background-color: var(--dark-bg);
 `;
 
-const navMotion: Variants = {
-  initial: {opacity: 0, y: -100},
+const navMotion = {
+  initial: { opacity: 0, y: -100 },
   animate: {
-    opacity: 1, y: 0,
+    opacity: 1,
+    y: 0,
     transition: {
       duration: 1,
     },
   },
 };
-
 
 function Navbar() {
   return (
@@ -46,29 +47,16 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            <NavLink
-              className="nav-link px-lg-5 lead "
-              exact
-              to="/"
-            >
+            <NavLink className="nav-link px-lg-5 lead " exact to="/">
               خانه
             </NavLink>
-            <NavLink
-              className="nav-link px-lg-5 lead"
-              to="/About"
-            >
+            <NavLink className="nav-link px-lg-5 lead" to="/About">
               درباره
             </NavLink>
-            <NavLink
-              className="nav-link px-lg-5 lead"
-              to="/Projects"
-            >
+            <NavLink className="nav-link px-lg-5 lead" to="/Projects">
               پروژه ها
             </NavLink>
-            <NavLink
-              className="nav-link px-lg-5 lead"
-              to="/Contact"
-            >
+            <NavLink className="nav-link px-lg-5 lead" to="/Contact">
               تماس
             </NavLink>
           </motion.div>
