@@ -73,7 +73,7 @@ const ShowcaseStyle = styled.section`
     }
 `;
 
-const parentMotion: Variants = {
+const parentMotion= {
   initial: {},
   animate: {
     transition: {
@@ -82,7 +82,7 @@ const parentMotion: Variants = {
   },
 };
 
-const childMotion: Variants = {
+const childMotion= {
   initial: {
     opacity: 0,
     y: 10,
@@ -101,17 +101,11 @@ export default function Showcase() {
     <ShowcaseStyle className="w-100  mt-5 text-white">
       <div className="show-case-content container h-100 d-flex justify-content-md-center align-items-center flex-column mt-sm-5">
         <div className="d-flex flex-column align-items-center show-case-title">
-          <MyH2
-            className=""
-            initial={{ opacity: 0, y: -100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5, delay: 0.2 },
-            }}
-          >
-            خوش اومدی
-          </MyH2>
+          <motion.div initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition:{
+            duration: 1,
+          }}}>
+            <MyH2>خوش اومدی</MyH2>
+          </motion.div>
           <motion.h2
             className="showcase-title"
             initial={{ opacity: 0, y: -150 }}
@@ -172,32 +166,36 @@ export default function Showcase() {
         </div>
 
         <div className="d-flex flex-column align-items-center show-case-text">
-          <PText
-            textPos="text-center"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-              },
-            }}
-          >
-            من به مدت 4 سال به عنوان یک طراح و توسعه دهنده وب مستقل کار می کنم.
-            من عاشق طراحی و ایجاد تجارب وب جدید برای مردم هستم من به مدت 4 سال
-            به عنوان یک طراح و توسعه دهنده وب مستقل کار می کنم.
-          </PText>
-          <MyBtn
-            btnText={"نمونه کار ها"}
-            outline={false}
-            btnLink={"/projects"}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-              },
-            }}
-          ></MyBtn>
+          <motion.div initial={{opacity: 0, y: 100}}  animate={{opacity: 1, y: -10, transition:{duration: 1.2}}}>
+            <PText
+              textPos="text-center"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+            >
+              من به مدت 4 سال به عنوان یک طراح و توسعه دهنده وب مستقل کار می کنم.
+              من عاشق طراحی و ایجاد تجارب وب جدید برای مردم هستم من به مدت 4 سال
+              به عنوان یک طراح و توسعه دهنده وب مستقل کار می کنم.
+            </PText>
+          </motion.div>
+          <motion.div initial={{opacity: 0, y: 100}}  animate={{opacity: 1, y: 0, transition:{duration: 1.2}}}>
+            <MyBtn
+              btnText={"نمونه کار ها"}
+              outline={false}
+              btnLink={"/projects"}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+            ></MyBtn>
+          </motion.div>
         </div>
       </div>
 

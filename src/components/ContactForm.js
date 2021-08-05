@@ -43,38 +43,67 @@ const ContactFormStyle = styled.form`
   }
 `;
 
+const parentVariant = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+const childVariant = {
+  initial: { opacity: 0, y: 100 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 1,
+    },
+  },
+};
+
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xdoywgpa");
   return (
-    <ContactFormStyle
-      className="d-flex flex-column"
-      onSubmit={handleSubmit}
-      method="post"
-    >
-      <label htmlFor="name">
-        اسم
-        <input type="input" name="name" id="name" />
-      </label>
-      <label htmlFor="email">
-        ایمیل
-        <input type="email" name="email" id="email" />
-      </label>
+    <ContactFormStyle className="" onSubmit={handleSubmit} method="post">
+      <motion.div
+        className="d-flex flex-column"
+        variants={parentVariant}
+        initial={"initial"}
+        animate={"animate"}
+      >
+        <motion.label htmlFor="name" variants={childVariant}>
+          اسم
+          <input type="input" name="name" id="name" />
+        </motion.label>
+        <motion.label htmlFor="email" variants={childVariant}>
+          ایمیل
+          <input type="email" name="email" id="email" />
+        </motion.label>
 
-      <label htmlFor="email">
-        متن پیام
-        <textarea name="message" id="message" rows="6" />
-      </label>
+        <motion.label htmlFor="email" variants={childVariant}>
+          متن پیام
+          <textarea name="message" id="message" rows="6" />
+        </motion.label>
 
-      <button type="submit" disabled={state.submitting}>
-        ارسال
-      </button>
-      {(state.succeeded && <motion.p className="fs-5 bg-success p-3 my-4 rounded"
-        animate={{opacity:0,
-          transition:{
-            delay: 9,
-          }
-        }}
-      >تشکر... سعی میکنم در کمترین زمان ممکن جواب بدم. :)</motion.p>)}
+        <motion.button type="submit" disabled={state.submitting} variants={childVariant}>
+          ارسال
+        </motion.button>
+        {state.succeeded && (
+          <motion.p
+            className="fs-5 bg-success p-3 my-4 rounded"
+            animate={{
+              opacity: 0,
+              transition: {
+                delay: 5,
+              },
+            }}
+          >
+            تشکر... سعی میکنم در کمترین زمان ممکن جواب بدم. :)
+          </motion.p>
+        )}
+      </motion.div>
     </ContactFormStyle>
   );
 }

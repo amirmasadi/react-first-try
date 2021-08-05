@@ -7,6 +7,7 @@ import MyH2 from "../components/MyH2";
 import PText from "../components/PText";
 import ContactForm from "../components/ContactForm";
 import TransitionAnimation from "../components/TransitionAnimation";
+import { animate, motion } from "framer-motion";
 
 const ContactStyle = styled.section`
   .map-sec {
@@ -38,9 +39,30 @@ const ContactStyle = styled.section`
   }
 `;
 
+const parentVariant = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+const childVariant = {
+  initial: { opacity: 0, y: 100 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 1,
+
+    },
+  },
+};
+
 export default function Contact() {
   return (
-    <div className="position-relative" style={{paddingTop:"200px"}}>
+    <div className="position-relative" style={{ paddingTop: "200px" }}>
       <TransitionAnimation color="bg-secondary" delay="1.4" />
       <TransitionAnimation color="bg-light" delay="1.2" />
       <TransitionAnimation color="bg-dark" delay="1.1" />
@@ -52,11 +74,22 @@ export default function Contact() {
             headingPos="text-center"
           />
           <div className="d-flex flex-column flex-md-row align-items-start justify-content-around">
-            <div className="w-100 p-1 p-md-5">
-              <Contactitems icon="&#9742;" text="0912333444" />
-              <Contactitems icon="&#9993;" text="amirmasadi@outlook.com" />
-              <Contactitems icon="&#9872;" text="تهران، دماوند" />
-            </div>
+            <motion.div
+              className="w-100 p-1 p-md-5"
+              variants={parentVariant}
+              initial={"initial"}
+              animate={"animate"}
+            >
+              <motion.div variants={childVariant}>
+                <Contactitems icon="&#9742;" text="0912333444" />
+              </motion.div>
+              <motion.div variants={childVariant}>
+                <Contactitems icon="&#9993;" text="amirmasadi@outlook.com" />
+              </motion.div>
+              <motion.div variants={childVariant}>
+                <Contactitems icon="&#9872;" text="تهران، دماوند" />
+              </motion.div>
+            </motion.div>
             <div className="w-100 p-1 p-md-5">
               <ContactForm />
             </div>

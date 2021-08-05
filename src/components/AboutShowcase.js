@@ -3,6 +3,8 @@ import PText from "./PText";
 import MyH2 from "./MyH2";
 import MyBtn from "./MyBtn";
 import AboutPic from "../assets/images/about-page-img.jpg";
+import { motion } from "framer-motion";
+import CvBtn from "./CvBtn";
 
 
 export default function AboutShowcase() {
@@ -29,14 +31,50 @@ export default function AboutShowcase() {
           <br></br>
           <br></br>
         </PText>
-        <MyBtn btnLink="/about" btnText="دانلود رزومه" />
+        <CvBtn />
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center position-relative">
         <img
           src={AboutPic}
           className="img-fluid w-75 border border-3 border-secondary rounded "
           alt="about-img"
         />
+        <motion.div
+            className="position-absolute bg-light top-0 w-0 h-100"
+            initial={{ width: "100%", left: "0%" }}
+            animate={{
+              width: "0%",
+              left: "100%",
+              transition: {
+                duration: 0.2,
+                delay: 1.3,
+              },
+            }}
+          ></motion.div>
+          <motion.div
+            className="position-absolute bg-secondary top-0 w-0 h-100"
+            initial={{ width: "100%", left: "0%" }}
+            animate={{
+              width: "0%",
+              left: "100%",
+              transition: {
+                duration: 0.3,
+                delay: 1.2,
+              },
+            }}
+          ></motion.div>
+          <motion.div
+            className="position-absolute bg-dark top-0 w-0 h-100"
+            initial={{ width: "100%", left: "0%" }}
+            animate={{
+              width: "0%",
+              left: "100%",
+              transition: {
+                duration: 0.3,
+                delay: 1.1,
+              },
+            }}
+          ></motion.div>
       </div>
     </section>
   );

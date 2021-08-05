@@ -13,11 +13,24 @@ export default function ProjectDetails() {
     <div className="container" style={{ paddingTop: "150px" }}>
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-top">
         <div className="p-1 p-md-5">
-          <div className="mb-3">
+          <motion.div
+            className="mb-3"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          >
             <MyH2>{projDetails.name}</MyH2>
-          </div>
-          <PText>{projDetails.desc}</PText>
-          <p className="text-muted mt-5 fs-5">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
+          >
+            <PText>{projDetails.desc}</PText>
+          </motion.div>
+          <motion.p
+            className="text-muted mt-5 fs-5"
+            initial={{ opacity: 0, y: 150 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          >
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
@@ -35,20 +48,21 @@ export default function ProjectDetails() {
             ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
             گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
             که لازم است.
-          </p>
+          </motion.p>
         </div>
         <motion.img
           className="image-fluid rounded border border-2 border-secondary"
-          style={{ width: "400px", objectFit: "cover" }}
+          style={{ maxWidth: "400px", objectFit: "cover" }}
           src={projDetails.img}
           alt=""
-          initial={{ scale: 0.5, x: "100%", opacity: 0 }}
+          initial={{ scale: 0.8, y: "100%", opacity: 0 }}
           animate={{
             scale: 1,
-            x: 0,
+            y: 0,
             opacity: 1,
             transition: {
-              duration: 0.5,
+              type: "tween",
+              duration: 0.8,
             },
           }}
         />
