@@ -6,7 +6,7 @@ import PText from "./PText";
 import MyH2 from "./MyH2";
 import SocialArrow from "../assets/images/social-media-arrow.svg";
 import ScrollArrow from "../assets/images/scroll-down-arrow.svg";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ShowcaseStyle = styled.section`
   height: 90vh;

@@ -7,7 +7,7 @@ import MyH2 from "../components/MyH2";
 import PText from "../components/PText";
 import ContactForm from "../components/ContactForm";
 import TransitionAnimation from "../components/TransitionAnimation";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ContactStyle = styled.section`
   .map-sec {

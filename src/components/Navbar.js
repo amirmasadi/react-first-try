@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { motion, Variants } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Navstyle = styled.nav`
   background-color: var(--dark-bg);

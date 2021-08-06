@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import MyBtn from "./MyBtn";
 import SecHeading from "./SecHeading";
 import TopoPic from "../assets/images/topo-lines.png";
 import CvBtn from "./CvBtn";
